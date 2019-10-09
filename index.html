@@ -1,0 +1,52 @@
+<!doctype html5>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Cookie Clicker</title>
+    <link rel="stylesheet" href="css/index.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular.min.js"></script>
+
+    <script src="js/index.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Cookie Clicker</h1>
+    </header>
+    <main>
+        <div data-ng-app="cookie">
+            <div data-ng-controller="cookieJar">
+                <h2>
+                    Cookies: {{ cookies.qty }}
+                    <button
+                        type="button"
+                        data-ng-click="addCookie()"
+                    >Add Cookie ({{ovens.qty}})</button>
+                </h2>
+            </div>
+            <div data-ng-controller="ovens">
+                <h3>
+                    Ovens: {{ ovens.qty }}
+                    <button
+                        type="button"
+                        data-ng-click="buyOven()"
+                    >Buy Oven ({{ovens.cost}})</button>
+                </h3>
+            </div>
+            <div data-ng-controller="grandmas">
+                <h3>
+                    Grandmas: {{ grandmas.qty }}
+                    <button
+                        type="button"
+                        data-ng-click="buyGrandma()"
+                    >Buy Grandma ({{grandmas.cost}})</button>
+                </h3>
+            </div>
+            
+            </div>
+        
+    </main>
+</body>
+</html>
