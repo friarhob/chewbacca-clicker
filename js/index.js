@@ -7,7 +7,7 @@ cookieApp.factory("FactCookieJar", function() {
 cookieApp.factory("FactOvens", function() {
     return { 
         qty: 1,
-        cost: 10
+        cost: 20
     };
 });
 
