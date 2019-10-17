@@ -43,18 +43,19 @@ cookieApp.controller("ovens", function($scope, FactCookieJar, FactOvens) {
 
 cookieApp.controller("grandmas", function($scope, $interval, FactCookieJar, FactGrandmas) {
     $scope.grandmas = FactGrandmas;
+    $scope.cookies = FactCookieJar;
 
     $scope.buyGrandma = function() {
-        if(FactCookieJar.qty >= $scope.grandmas.cost)
+        if($scope.cookies.qty >= $scope.grandmas.cost)
         {
-            FactCookieJar.qty -= $scope.grandmas.cost;
+            $scope.cookies.qty -= $scope.grandmas.cost;
             $scope.grandmas.qty += 1;
             $scope.grandmas.cost += 100;
         }
     };
 
     var update = $interval(function() {
-        FactCookieJar.qty += FactGrandmas.qty;
+        $scope.cookies.qty += $scope.grandmas.qty;
     }, 1000); //every second
 });
 
