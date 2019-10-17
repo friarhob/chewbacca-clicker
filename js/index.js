@@ -1,7 +1,7 @@
 var cookieApp = angular.module("cookie", []);
 
 cookieApp.factory("FactCookieJar", function() {
-    return { qty: 1000000 };
+    return { qty: 0 };
 });
 
 cookieApp.factory("FactOvens", function() {
