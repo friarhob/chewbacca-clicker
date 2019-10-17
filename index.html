@@ -23,7 +23,7 @@
                     <button
                         type="button"
                         data-ng-click="addCookie()"
-                    >Add Cookie ({{ovens.qty}})</button>
+                    >Add Cookies ({{ovens.qty}})</button>
                 </h2>
             </div>
             <div data-ng-controller="ovens">
@@ -44,8 +44,19 @@
                     >Buy Grandma ({{grandmas.cost}})</button>
                 </h3>
             </div>
-            
+
+            <div data-ng-controller="factories">
+                <h3>
+                    Factories: {{ factories.qty }}
+                    <button
+                        type="button"
+                        data-ng-click="buyFactory()"
+                    >Buy Factory ({{factories.cost}})</button>
+                </h3>
             </div>
+
+            
+        </div>
         
     </main>
 </body>
