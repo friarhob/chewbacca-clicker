@@ -55,6 +55,16 @@
                 </h3>
             </div>
 
+            <div data-ng-controller="retirementHomes">
+                <h3>
+                    Retirement Homes: {{ retirementHomes.qty }}
+                    <button
+                        type="button"
+                        data-ng-click="buyRetirementHome()"
+                    >Buy Retirement Home ({{retirementHomes.cost}})</button>
+                </h3>
+            </div>
+
             
         </div>
         
